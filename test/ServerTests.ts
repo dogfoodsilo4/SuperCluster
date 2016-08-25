@@ -8,13 +8,18 @@ import Server = require('../Server');
 /**
 * These tests cover the basics
 */
-describe("Server", function() {
+describe("Server Tests", function() {
 
     let _server = new Server();
 
-    it("should start", function (done)
+    it("Server should start and stop", function (done)
     {
-        chai.expect(_server.Start()).to.equal("Server Started Successfully");
+        _server.Start();
+        chai.expect(_server.Status()).to.equal("Started");
+
+        _server.Stop();
+        chai.expect(_server.Status()).to.equal("Stopped");
+
         done();
     });
 });
