@@ -3,7 +3,7 @@ node_modules
 *.js.map
 *.d.ts
 .tscache
-!app.js
+!startserver.js
 !gruntfile.js
 !**/typings/**/*.d.ts
 results.txt

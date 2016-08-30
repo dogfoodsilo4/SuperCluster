@@ -2,9 +2,12 @@
   "name": "SuperCluster",
   "version": "0.0.1",
   "devDependencies": {
-    "chai": "^3.5.0",
-    "grunt": "^1.0.1",
-    "grunt-mocha-test": "^0.12.7",
-    "grunt-ts": "^5.4.0"
-  }
+        "chai": "^3.5.0",
+        "grunt": "^1.0.1",
+        "grunt-mocha-test": "^0.12.7",
+        "grunt-ts": "^5.4.0"
+    },
+    "dependencies": {
+        "express": "^4"
+    }
 }

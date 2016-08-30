@@ -1,11 +1,16 @@
 
 [0m[0m
 [0m  Server Tests[0m
-Server Starting
-Number Of CPUs: 8
-Server Started Successfully
-[2K[0G  [32m  √[0m[90m Server should start successfully[0m
+Master Server Started
+Worker 1 Started
+Worker 2 Started
+Worker 3 Started
+Worker 4 Started
+Worker 5 Started
+Worker 6 Started
+Worker 7 Started
+[2K[0G  [32m  √[0m[90m Server should start and stop[0m
 
 
-[92m [0m[32m 1 passing[0m[90m (6ms)[0m
+[92m [0m[32m 1 passing[0m[90m (37ms)[0m
 
