@@ -23,19 +23,25 @@ if (cluster.isMaster)
 else
 {
     let app = express();
+    let id = cluster.worker.id;
+
+    var slowFunc = (cb: () => void) => {
+        setTimeout(() => {
+            return cb();
+        }, 1000);
+    };
 
     // Add index page
     app.get('/:input', (req, res) => {
-        console.log('Request handled by worker %d', cluster.worker.id);
+        console.log('Request handled by worker %d', id);
 
-        setTimeout(() => {
-                res.send('Hello from worker ' + cluster.worker.id);
-                console.log('Request completed by worker %d', cluster.worker.id);
-            }
-            ,5000);
+        slowFunc(() => {
+            res.send('Hello from worker ' + id);
+            console.log('Request completed by worker %d', id);
+        });
     });
 
     // Bind to a port
     app.listen(3000);
-    console.log('Worker %d running!', cluster.worker.id);
+    console.log('Worker %d running!', id);
 }
